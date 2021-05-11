@@ -5,13 +5,14 @@
 
 from scrapy import signals
 from fake_useragent import UserAgent
-# from logging import getLogger
 # useful for handling different item types with a single interface
 from itemadapter import is_item, ItemAdapter
+# import scrapy.downloadermiddlewares.cookies
 
 #proxy
 from Amazon_Spider import settings
 import random
+
 
 
 
@@ -62,34 +63,24 @@ class AmazonSpiderSpiderMiddleware:
         spider.logger.info('Spider opened: %s' % spider.name)
 
 
+
+
+
+
+
+
 class AmazonSpiderDownloaderMiddleware:
-    # Not all methods need to be defined. If a method is not defined,
-    # scrapy acts as if the downloader middleware does not modify the
-    # passed objects.
     
     @classmethod
     def from_crawler(cls, crawler):
-        # This method is used by Scrapy to create your spiders.
         s = cls()
         crawler.signals.connect(s.spider_opened, signal=signals.spider_opened)
         return s
-
-    # def __init__(self):
-        # self.logger = getLogger(__name__)
-        # self.timeout = timeout
-        # options = EdgeOptions()
-        # options.use_chromium = True
-        # options.add_argument("headless")
-        # options.add_argument("disable-gpu")
-        # options.add_experimental_option("excludeSwitches", ['enable-automation', 'enable-logging'])
-        # self.browser = Edge(options = options)
 
     def process_request(self, request, spider):
         # Called for each request that goes through the downloader
         # middleware.
         request.headers['User-Agent'] = str(UserAgent().random)
-        # spider.logger.debug('selenium start')
-        # self.browser.get('https://www.amazon.com/Best-Sellers/zgbs/ref=zg_bs_unv_ac_0_12890801_3')
     
         return None
 
@@ -107,10 +98,13 @@ class AmazonSpiderDownloaderMiddleware:
         spider.logger.info('Spider opened: %s' % spider.name)
         
 
+
+
+
+
 class ProxyMiddleWare(object):
 
 
-    
     def process_request(self,request, spider):
         '''对request对象加上proxy'''
         proxy = random.choice(settings.PROXY_POOL)
@@ -142,3 +136,35 @@ class ProxyMiddleWare(object):
             return  request
 
         
+
+
+
+
+
+# class CookieMiddleWare(CookiesMiddleware):
+
+#     def process_request(self, request, spider):
+#         if request.meta.get('dont_merge_cookies', False):
+#             return
+
+#         cookiejarkey = request.meta.get("cookiejar")
+#         jar = self.jars[cookiejarkey]
+#         for cookie in self._get_request_cookies(jar, request):
+#             jar.set_cookie_if_ok(cookie, request)
+
+#         # set Cookie header
+#         request.headers.pop('Cookie', None)
+#         jar.add_cookie_header(request)
+#         self._debug_cookie(request, spider)
+
+#     def process_response(self, request, response, spider):
+#         if request.meta.get('dont_merge_cookies', False):
+#             return response
+
+#         # extract cookies from Set-Cookie and drop invalid/expired cookies
+#         cookiejarkey = request.meta.get("cookiejar")
+#         jar = self.jars[cookiejarkey]
+#         jar.extract_cookies(response, request)
+#         self._debug_set_cookie(response, spider)
+
+#         return response
