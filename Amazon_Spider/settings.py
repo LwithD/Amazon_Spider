@@ -75,7 +75,7 @@ ITEM_PIPELINES = {
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
-#AUTOTHROTTLE_ENABLED = True
+AUTOTHROTTLE_ENABLED = True  #限速
 # The initial download delay
 #AUTOTHROTTLE_START_DELAY = 5
 # The maximum download delay to be set in case of high latencies
@@ -100,7 +100,7 @@ PROXY_POOL = ['']
 # print('1')
 
 def refresh_pool():
-    url = 'http://api.shenlongip.com/ip?key=z9grssjx&pattern=json&count=1&need=1000&protocol=1'
+    url = ''
     json = requests.get(url).json()
     global PROXY_POOL
     pool = []
