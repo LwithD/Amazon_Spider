@@ -15,8 +15,17 @@ class AmazonSpiderPipeline:
         self.fp = open('./amazon.txt','w',encoding='utf-8')
 
     def process_item(self, item, spider):
-        url = item['name']
-        self.fp.write(url+'\n')
+        name = item['name']
+        # author = item['author']
+        # rating = item['rating']
+        # rating_num = item['rating_num']
+        # price_kindle = item['price_kindle']
+        # price_paper = item['price_paper']
+        # price_hard = item['price_hard']
+        # price_audio = item['price_audioCD']
+        # self.fp.write(name+'\n'+author+'\n'+rating+'\n'+rating_num+'\n'+price_kindle+'\n'
+        #     +price_paper+'\n'+price_hard+'\n'+price_audio)
+        self.fp.write(name)
         return item
 
     def close_spider(self,spider):
