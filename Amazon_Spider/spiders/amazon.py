@@ -15,21 +15,17 @@ class AmazonSpider(CrawlSpider):
     link_detail = LinkExtractor(allow=r'ref=sr_1_2')#&ref=sr_\d+_\d+
 
     rules = (
-        Rule(link_list,callback = 'parsesss',follow=False),
+        Rule(link_list,follow=False),#callback = 'parsesss',
         Rule(link_detail, callback='parse_item', follow=False),
     )
 
-    def parsesss(self,response):
-        item = AmazonSpiderItem()
-        item['name'] = response.text
-        yield item
+    # def parsesss(self,response):
+    #     item = AmazonSpiderItem()
+    #     item['name'] = response.text
+    #     yield item
 
     def parse_item(self, response):
-        print(response)
         item = AmazonSpiderItem()
-        #item['domain_id'] = response.xpath('//input[@id="sid"]/@value').get()
-        #item['name'] = response.xpath('//div[@id="name"]').get()
-        #item['description'] = response.xpath('//div[@id="description"]').get()
         item['name'] = response.xpath('//*[@id="productTitle"]/text()').extract_first()
         item['author'] = response.xpath('//*[@id="bylineInfo"]/span/span[1]/a[1]/text()').extract_first()
         rating = response.xpath('//*[@id="acrPopover"]/span[1]/a/i[1]/span/text()').extract_first()
@@ -42,10 +38,15 @@ class AmazonSpider(CrawlSpider):
             rating_num = int(re.findall(r'(\d+) ratings',rating_num_response)[0])
         item['rating_num'] = rating_num
         li_list = response.xpath('//*[@id="tmmSwatches"]/ul/li')
-        for li in li_list:
-            price = li.xpath('/span/span/span/a/span[2]/span/text()').extract_first()
-            price = re.findall('$\d+',price)[0]
-            s = li.xpath('/span/span/span/a/span[1]/text()').extract_first()
+        for li in li_list:     #/span/span[1]/span/a/span[2]/text()
+            price = li.xpath('./span/span[1]/span[1]/a/span[2]//text()').extract_first()
+            print(price)
+            price = re.findall('\$(\d+\.?\d+)',price)
+            if price == []:
+                continue
+            else:
+                price = price[0]
+            s = li.xpath('./span/span/span/a/span[1]/text()').extract_first()
             if 'Kindle' in s:
                 item['price_kindle']=price
             elif 'Paperback' in s:
@@ -54,5 +55,5 @@ class AmazonSpider(CrawlSpider):
                 item['price_hard'] = price
             elif 'Audio CD' in s:
                 item['price_audioCD'] = price
-        print(item)
+        # print(item)
         yield item
