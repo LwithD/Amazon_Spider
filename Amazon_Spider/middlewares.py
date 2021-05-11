@@ -4,13 +4,15 @@
 # https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
 from scrapy import signals
-from msedge.selenium_tools import Edge, EdgeOptions
 from fake_useragent import UserAgent
 # from logging import getLogger
-
-
 # useful for handling different item types with a single interface
 from itemadapter import is_item, ItemAdapter
+
+#proxy
+from Amazon_Spider import settings
+import random
+
 
 
 class AmazonSpiderSpiderMiddleware:
@@ -64,12 +66,7 @@ class AmazonSpiderDownloaderMiddleware:
     # Not all methods need to be defined. If a method is not defined,
     # scrapy acts as if the downloader middleware does not modify the
     # passed objects.
-# options = EdgeOptions()
-# options.use_chromium = True
-# options.add_argument("headless")
-# options.add_argument("disable-gpu")
-# options.add_experimental_option("excludeSwitches", ['enable-automation', 'enable-logging'])
-
+    
     @classmethod
     def from_crawler(cls, crawler):
         # This method is used by Scrapy to create your spiders.
@@ -77,54 +74,71 @@ class AmazonSpiderDownloaderMiddleware:
         crawler.signals.connect(s.spider_opened, signal=signals.spider_opened)
         return s
 
-    def __init__(self):
+    # def __init__(self):
         # self.logger = getLogger(__name__)
         # self.timeout = timeout
-        options = EdgeOptions()
-        options.use_chromium = True
-        options.add_argument("headless")
-        options.add_argument("disable-gpu")
-        options.add_experimental_option("excludeSwitches", ['enable-automation', 'enable-logging'])
-        self.browser = Edge(options = options)
+        # options = EdgeOptions()
+        # options.use_chromium = True
+        # options.add_argument("headless")
+        # options.add_argument("disable-gpu")
+        # options.add_experimental_option("excludeSwitches", ['enable-automation', 'enable-logging'])
+        # self.browser = Edge(options = options)
 
     def process_request(self, request, spider):
         # Called for each request that goes through the downloader
         # middleware.
         request.headers['User-Agent'] = str(UserAgent().random)
-
         # spider.logger.debug('selenium start')
         # self.browser.get('https://www.amazon.com/Best-Sellers/zgbs/ref=zg_bs_unv_ac_0_12890801_3')
-        
-        # Must either:
-        # - return None: continue processing this request
-        # - or return a Response object
-        # - or return a Request object
-        # - or raise IgnoreRequest: process_exception() methods of
-        #   installed downloader middleware will be called
+    
         return None
 
     def process_response(self, request, response, spider):
-        # Called with the response returned from the downloader.
-
-        # Must either;
-        # - return a Response object
-        # - return a Request object
-        # - or raise IgnoreRequest
         return response
 
     def process_exception(self, request, exception, spider):
-        # Called when a download handler or a process_request()
-        # (from other downloader middleware) raises an exception.
-
-        # Must either:
-        # - return None: continue processing this exception
-        # - return a Response object: stops process_exception() chain
-        # - return a Request object: stops process_exception() chain
         pass
 
-    def __del__(self):
-        self.browser.close()
+    # def __del__(self):
+    #     self.browser.close()
 
     def spider_opened(self, spider):
+        settings.refresh_pool()
         spider.logger.info('Spider opened: %s' % spider.name)
+        
+
+class ProxyMiddleWare(object):
+
+
+    
+    def process_request(self,request, spider):
+        '''对request对象加上proxy'''
+        proxy = random.choice(settings.PROXY_POOL)
+        spider.logger.info("this is request ip:"+proxy)
+        request.meta['proxy'] = proxy
+
+
+    def process_response(self, request, response, spider):
+        # 如果返回的response状态不是200，重新生成当前request对象
+        # if response.status != 200:
+        #     proxy = random.choice(PROXY_POOL)
+        #     self.spider.logger.info("this is request ip:"+proxy)
+        #     request.meta['proxy'] = proxy
+        #     return request
+        return response
+
+    def process_exception(self, request, exception, spider):
+        if 'proxy' not in request.meta:
+            spider.logger.error("没代理错了,需要检查")
+            return
+        else:
+            spider.logger.error("有代理也错了，刷新代理池")
+            settings.refresh_pool()
+            request.meta["exception"] = True
+            spider.logger.info("重新获取ip")
+            proxy = random.choice(settings.PROXY_POOL)
+            spider.logger.info("this is request ip:"+proxy)
+            request.meta['proxy'] = proxy
+            return  request
+
         
