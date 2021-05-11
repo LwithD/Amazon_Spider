@@ -15,7 +15,7 @@ class AmazonSpiderPipeline:
         self.fp = open('./amazon.txt','w',encoding='utf-8')
 
     def process_item(self, item, spider):
-        url = item['project_url']
+        url = item['name']
         self.fp.write(url+'\n')
         return item
 
