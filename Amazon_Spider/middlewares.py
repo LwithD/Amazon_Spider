@@ -7,7 +7,6 @@ from scrapy import signals
 from fake_useragent import UserAgent
 # useful for handling different item types with a single interface
 from itemadapter import is_item, ItemAdapter
-# import scrapy.downloadermiddlewares.cookies
 
 #proxy
 from Amazon_Spider import settings
@@ -140,31 +139,21 @@ class ProxyMiddleWare(object):
 
 
 
+# import os
 
-# class CookieMiddleWare(CookiesMiddleware):
+# from scrapy.dupefilter import RFPDupeFilter
 
-#     def process_request(self, request, spider):
-#         if request.meta.get('dont_merge_cookies', False):
-#             return
+# class CustomFilter(RFPDupeFilter):
+# """A dupe filter that considers specific ids in the url"""
 
-#         cookiejarkey = request.meta.get("cookiejar")
-#         jar = self.jars[cookiejarkey]
-#         for cookie in self._get_request_cookies(jar, request):
-#             jar.set_cookie_if_ok(cookie, request)
+#     def __getid(self, url):
+#         mm = url.split("&refer")[0] #or something like that
+#         return mm
 
-#         # set Cookie header
-#         request.headers.pop('Cookie', None)
-#         jar.add_cookie_header(request)
-#         self._debug_cookie(request, spider)
-
-#     def process_response(self, request, response, spider):
-#         if request.meta.get('dont_merge_cookies', False):
-#             return response
-
-#         # extract cookies from Set-Cookie and drop invalid/expired cookies
-#         cookiejarkey = request.meta.get("cookiejar")
-#         jar = self.jars[cookiejarkey]
-#         jar.extract_cookies(response, request)
-#         self._debug_set_cookie(response, spider)
-
-#         return response
+#     def request_seen(self, request):
+#         fp = self.__getid(request.url)
+#         if fp in self.fingerprints:
+#             return True
+#         self.fingerprints.add(fp)
+#         if self.file:
+#             self.file.write(fp + os.linesep)
