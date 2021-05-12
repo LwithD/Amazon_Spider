@@ -1,0 +1,403 @@
+name:
+Dog Man: Mothering Heights: From the Creator of Captain Underpants (Dog Man #10) (10)
+
+author:Dav Pilkey
+rating:4.9
+rating_num:6186
+price_kindle:7.99
+price_hard:6.0
+name:
+Killing the Mob: The Fight Against Organized Crime in America (Bill O'Reilly's Killing Series)
+
+author:Bill O'Reilly
+rating:4.5
+rating_num:272
+price_kindle:14.99
+price_hard:17.98
+price_audioCD:22.72
+name:
+World Travel: An Irreverent Guide
+
+author:Anthony Bourdain
+rating:4.4
+rating_num:412
+price_kindle:19.99
+price_hard:20.49
+price_paper:27.61
+price_audioCD:25.99
+name:
+Shadow and Bone
+
+author:None
+rating:4.4
+rating_num:10862
+price_kindle:7.38
+price_hard:15.61
+price_paper:7.59
+name:
+The Truth About COVID-19: Exposing The Great Reset, Lockdowns, Vaccine Passports, and the New Normal
+
+author:Ronnie Cummins
+rating:4.6
+rating_num:211
+price_kindle:13.99
+price_hard:22.83
+name:
+The Four Agreements: A Practical Guide to Personal Freedom (A Toltec Wisdom Book)
+
+author:Don Miguel Ruiz
+rating:4.8
+rating_num:54935
+price_kindle:5.77
+price_hard:20.27
+price_paper:4.0
+price_audioCD:91.77
+name:
+The Boy, the Mole, the Fox and the Horse CD
+
+author:Charlie Mackesy
+rating:4.9
+rating_num:73269
+price_kindle:11.99
+price_hard:7.99
+price_audioCD:10.92
+name:
+The Boy, the Mole, the Fox and the Horse
+
+author:Charlie Mackesy
+rating:4.9
+rating_num:73269
+price_kindle:11.99
+price_hard:7.99
+price_audioCD:10.92
+name:
+Sooley: A Novel
+
+author:None
+rating:4.5
+rating_num:3651
+price_kindle:14.99
+price_hard:14.99
+price_paper:21.29
+price_audioCD:30.17
+name:
+Oh, the Places You'll Go!
+
+author:Dr Seuss
+rating:4.9
+rating_num:23409
+price_kindle:9.99
+price_hard:2.0
+price_paper:7.05
+name:
+Atomic Habits
+
+author:James Clear
+rating:4.8
+rating_num:40700
+price_kindle:12.99
+price_hard:7.98
+price_paper:15.01
+price_audioCD:9.52
+name:
+Four Winds
+
+author:Kristin Hannah
+rating:4.5
+rating_num:45032
+price_kindle:14.99
+price_hard:13.22
+price_paper:17.54
+price_audioCD:27.48
+name:
+Sooley: A Novel
+
+author:John Grisham
+rating:4.5
+rating_num:3651
+price_kindle:14.99
+price_hard:14.99
+price_paper:21.29
+price_audioCD:30.17
+name:
+The Boy, the Mole, the Fox and the Horse
+
+author:None
+rating:4.9
+rating_num:73269
+price_kindle:11.99
+price_hard:7.99
+price_audioCD:10.92
+name:
+Sooley: A Novel
+
+author:John Grisham
+rating:4.5
+rating_num:3651
+price_kindle:14.99
+price_hard:14.99
+price_paper:21.29
+price_audioCD:30.17
+name:
+The Four Winds: A Novel
+
+author:Kristin Hannah
+rating:4.5
+rating_num:45032
+price_kindle:14.99
+price_hard:13.22
+price_paper:17.54
+price_audioCD:27.48
+name:
+Shadow and Bone (The Shadow and Bone Trilogy Book 1)
+
+author:Leigh Bardugo
+rating:4.4
+rating_num:10862
+price_kindle:7.38
+price_hard:15.61
+price_paper:7.59
+name:
+The Four Winds: A Novel
+
+author:Kristin Hannah
+rating:4.5
+rating_num:45032
+price_kindle:14.99
+price_hard:13.22
+price_paper:17.54
+price_audioCD:27.48
+name:
+Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones
+
+author:James Clear
+rating:4.8
+rating_num:40700
+price_kindle:12.99
+price_hard:7.98
+price_paper:15.01
+price_audioCD:9.52
+name:
+The Midnight Library: A Novel
+
+author:Matt Haig
+rating:4.4
+rating_num:68516
+price_kindle:13.99
+price_hard:12.86
+price_paper:11.5
+price_audioCD:20.79
+name:
+The Midnight Library: A Novel
+
+author:Matt Haig
+rating:4.4
+rating_num:68516
+price_kindle:13.99
+price_hard:12.86
+price_paper:11.5
+price_audioCD:20.79
+name:
+Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones
+
+author:James Clear
+rating:4.8
+rating_num:40700
+price_kindle:12.99
+price_hard:7.98
+price_paper:15.01
+price_audioCD:9.52
+name:
+Oh, the Places You'll Go! (Classic Seuss)
+
+author:Dr. Seuss
+rating:4.9
+rating_num:23409
+price_kindle:9.99
+price_hard:2.0
+price_paper:7.05
+name:
+The Body Keeps the Score: Brain, Mind, and Body in the Healing of Trauma
+
+author:None
+rating:4.8
+rating_num:29039
+price_kindle:12.99
+price_hard:15.98
+price_paper:10.23
+price_audioCD:29.25
+name:
+Sooley: A Novel (Random House Large Print)
+
+author:John Grisham
+rating:4.5
+rating_num:3651
+price_kindle:14.99
+price_hard:14.99
+price_paper:21.29
+price_audioCD:30.17
+name:
+The Four Agreements: A Practical Guide to Personal Freedom
+
+author:None
+rating:4.8
+rating_num:54935
+price_kindle:5.77
+price_hard:20.27
+price_paper:4.0
+price_audioCD:91.77
+name:
+The Four Winds: A Novel
+
+author:Kristin Hannah
+rating:4.5
+rating_num:45032
+price_kindle:14.99
+price_hard:13.22
+price_paper:17.54
+price_audioCD:27.48
+name:
+Shadow and Bone (The Grisha Trilogy)
+
+author:Leigh Bardugo
+rating:4.4
+rating_num:10862
+price_kindle:7.38
+price_hard:15.61
+price_paper:7.59
+name:
+Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones
+
+author:James Clear
+rating:4.8
+rating_num:40700
+price_kindle:12.99
+price_hard:7.98
+price_paper:15.01
+price_audioCD:9.52
+name:
+The Midnight Library: A Novel
+
+author:Matt Haig
+rating:4.4
+rating_num:68516
+price_kindle:13.99
+price_hard:12.86
+price_paper:11.5
+price_audioCD:20.79
+name:
+The Midnight Library: A Novel
+
+author:None
+rating:4.4
+rating_num:68516
+price_kindle:13.99
+price_hard:12.86
+price_paper:11.5
+price_audioCD:20.79
+name:
+The Body Keeps the Score: Brain, Mind, and Body in the Healing of Trauma
+
+author:Bessel  van der Kolk
+rating:4.8
+rating_num:29039
+price_kindle:12.99
+price_hard:15.98
+price_paper:10.23
+price_audioCD:29.25
+name:
+Shadow and Bone (The Shadow and Bone Trilogy) (The Shadow and Bone Trilogy, 1)
+
+author:Leigh Bardugo
+rating:4.4
+rating_num:10862
+price_kindle:7.38
+price_hard:15.61
+price_paper:7.59
+name:
+Killing the Mob: The Fight Against Organized Crime in America (Bill O'Reilly's Killing Series)
+
+author:Bill O'Reilly
+rating:4.5
+rating_num:272
+price_kindle:14.99
+price_hard:17.98
+price_audioCD:22.72
+name:
+Shadow and Bone (The Shadow and Bone Trilogy) (The Shadow and Bone Trilogy, 1)
+
+author:Leigh Bardugo
+rating:4.4
+rating_num:10862
+price_kindle:7.38
+price_hard:15.61
+price_paper:7.59
+name:
+World Travel: An Irreverent Guide
+
+author:Anthony Bourdain
+rating:4.4
+rating_num:412
+price_kindle:19.99
+price_hard:20.49
+price_paper:27.61
+price_audioCD:25.99
+name:
+The Women of the Bible Speak: The Wisdom of 16 Women and Their Lessons for Today
+
+author:None
+rating:4.9
+rating_num:2364
+price_kindle:14.99
+price_hard:14.98
+price_paper:25.19
+price_audioCD:19.49
+name:
+World Travel: An Irreverent Guide
+
+author:None
+rating:4.4
+rating_num:412
+price_kindle:19.99
+price_hard:20.49
+price_paper:27.61
+price_audioCD:25.99
+name:
+The Body Keeps the Score: Brain, Mind, and Body in the Healing of Trauma
+
+author:None
+rating:4.8
+rating_num:29039
+price_kindle:12.99
+price_hard:15.98
+price_paper:10.23
+price_audioCD:29.25
+name:
+World Travel: An Irreverent Guide
+
+author:Anthony Bourdain
+rating:4.4
+rating_num:412
+price_kindle:19.99
+price_hard:20.49
+price_paper:27.61
+price_audioCD:25.99
+name:
+The Body Keeps the Score: Brain, Mind, and Body in the Healing of Trauma
+
+author:None
+rating:4.8
+rating_num:29039
+price_kindle:12.99
+price_hard:15.98
+price_paper:10.23
+price_audioCD:29.25
+name:
+Killing the Mob: The Fight Against Organized Crime in America (Bill O'Reilly's Killing Series)
+
+author:Bill O'Reilly
+rating:4.5
+rating_num:272
+price_kindle:14.99
+price_hard:17.98
+price_audioCD:22.72
