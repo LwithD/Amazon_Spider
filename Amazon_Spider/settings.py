@@ -48,7 +48,7 @@ DEFAULT_REQUEST_HEADERS = {
   'Accept': '*/*',
   'Connection': 'keep-alive',
   'Accept-Encoding':'gzip, deflate, br',
-  'cookie':'session-id=132-7361795-9934902; i18n-prefs=USD; ubid-main=132-8733755-6723145; session-id-time=2082787201l; _msuuid_jniwozxj70=9D0163B8-1DB6-40C1-B79A-2E7FE6BF635B; s_vnum=2052036977725%26vn%3D2; s_nr=1620093912897-Repeat; s_dslv=1620093912899; s_fid=010F1C5CADB81738-2C7FB0627453304C; regStatus=pre-register; aws-target-data=%7B%22support%22%3A%221%22%7D; aws-target-visitor-id=1620543230141-504697.38_0; lc-main=en_US; sp-cdn="L5Z9:CN"; session-token=xq3dpAmV2k2MvfACZ11fWZ97vIILtSaPIHTeFegSnCHd7dHQkRa348V6RgcZAtC1w6OFW4ZV/MnG0iGhfIKLyIl2GMjmQzXJI+hgg67mGC57io48gGB86lZUMhHF1s0NAZLUoTQy+gYHLaIOlOHIEbjDS0z+wqCN8pn24KWcRegYnAlUtQnWmLu0xxVp7MFu; skin=noskin; csm-hit=s-QJCZMY8XEVE6803PY0TP|1620809077128',
+  'cookie':'',#先进入网站获取一次cookie
 }
 
 # Enable or disable spider middlewares
